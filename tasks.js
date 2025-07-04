@@ -2,7 +2,7 @@
 
 (() => {
   const ENDPOINT = 'tasks.json';
-  const INTERVAL_MS = 5000;        // poll every 5 seconds
+  const INTERVAL_MS = 1000;        // poll every 5 seconds
   let lastDataHash = null;
 
   // Simple hash on JSON string to detect changes
