@@ -1,5 +1,51 @@
 [
   {
+    "TaskName": "fyrgyfgrg",
+    "TaskLink": "https://chat.deepseek.com/a/chat/s/c29b9edd-5846-46a5-9615-915414659f8f",
+    "CheckboxColors": [
+      "Green",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent"
+    ],
+    "UserTasks": [
+      false,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "IsNotWorking": false,
+    "Price": 1
+  },
+  {
     "TaskName": "lola",
     "TaskLink": "t.me/hadj",
     "CheckboxColors": [
