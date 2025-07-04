@@ -1,109 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <title>My Task Manager</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager - Synced Tasks</title>
   <style>
     body {
-      font-family: sans-serif;
-      background: #121212;
-      color: #eee;
-      padding: 1em;
+      font-family: Arial, sans-serif;
+      padding: 10px;
+      margin: 0;
+      background: #f9f9f9;
     }
+
+    h1 {
+      text-align: center;
+      font-size: 1.5em;
+    }
+
     table {
-      width: 100%;
       border-collapse: collapse;
-      margin-top: 1em;
+      width: 100%;
+      background: white;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
     }
+
     th, td {
-      padding: 0.5em;
-      border: 1px solid #333;
-    }
-    th {
-      background: #1e1e1e;
-      color: #aaa;
+      border: 1px solid #ddd;
+      padding: 8px;
+      font-size: 14px;
       text-align: left;
     }
+
+    th {
+      background-color: #4CAF50;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+
     tr:nth-child(even) {
-      background: #1a1a1a;
+      background-color: #f2f2f2;
     }
+
     a {
-      color: #4fc3f7;
+      color: #2196F3;
       text-decoration: none;
+      word-break: break-word;
     }
-    a:hover {
-      text-decoration: underline;
+
+    @media screen and (max-width: 600px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      thead {
+        display: none;
+      }
+
+      tr {
+        margin-bottom: 15px;
+        background: white;
+        padding: 10px;
+        border-radius: 6px;
+      }
+
+      td {
+        border: none;
+        padding: 8px 0;
+      }
+
+      td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 2px;
+        color: #333;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Active Tasks</h1>
-  <table id="tasks-table">
+  <h1>📋 Synced Tasks</h1>
+  <table id="taskTable">
     <thead>
       <tr>
+        <th>Task</th>
         <th>₽</th>
-        <th>Task Name</th>
-        <th>Link</th>
       </tr>
     </thead>
-    <tbody>
-      <!-- rows injected here -->
-    </tbody>
+    <tbody></tbody>
   </table>
 
   <script>
-    async function loadTasks() {
-      const urlBase = window.location.origin + window.location.pathname.replace(/index\.html$/, '');
-      const jsonUrl = urlBase + 'tasks.json';
-      try {
-        const res = await fetch(jsonUrl);
-        if (!res.ok) throw new Error(res.status + ' ' + res.statusText);
-        const tasks = await res.json();
+    fetch('tasks.json')
+      .then(response => response.json())
+      .then(data => {
+        const tbody = document.querySelector("#taskTable tbody");
+        data.forEach(task => {
+          if (task.isNotWorking) return;
 
-        const tbody = document.querySelector('#tasks-table tbody');
-        tasks.forEach(t => {
-          if (t.IsNotWorking) return;  // skip non-working
+          const row = document.createElement("tr");
 
-          const tr = document.createElement('tr');
+          const nameCell = document.createElement("td");
+          if (task.taskLink?.trim()) {
+            const link = document.createElement("a");
+            link.href = task.taskLink;
+            link.textContent = task.taskName || "Unnamed Task";
+            link.target = "_blank";
+            nameCell.appendChild(link);
+          } else {
+            nameCell.textContent = task.taskName || "Unnamed Task";
+          }
+          nameCell.setAttribute("data-label", "Task");
 
-          // ₽ column
-          const tdPrice = document.createElement('td');
-          tdPrice.textContent = t.Price.toFixed(2);
-          tr.appendChild(tdPrice);
+          const priceCell = document.createElement("td");
+          priceCell.textContent = task.price?.toFixed(2) || "0.00";
+          priceCell.setAttribute("data-label", "₽");
 
-          // Task Name column
-          const tdName = document.createElement('td');
-          const aName = document.createElement('a');
-          aName.href = t.TaskLink || '#';
-          aName.textContent = t.TaskName || '(no name)';
-          aName.target = '_blank';
-          tdName.appendChild(aName);
-          tr.appendChild(tdName);
+          row.appendChild(nameCell);
+          row.appendChild(priceCell);
 
-          // Link column (raw URL)
-          const tdLink = document.createElement('td');
-          const aLink = document.createElement('a');
-          aLink.href = t.TaskLink || '#';
-          aLink.textContent = t.TaskLink ? new URL(t.TaskLink).hostname : '';
-          aLink.target = '_blank';
-          tdLink.appendChild(aLink);
-          tr.appendChild(tdLink);
-
-          tbody.appendChild(tr);
+          tbody.appendChild(row);
         });
-      } catch (err) {
-        console.error('Failed to load tasks:', err);
-        const tbody = document.querySelector('#tasks-table tbody');
-        const tr = document.createElement('tr');
-        const td = document.createElement('td');
-        td.colSpan = 3;
-        td.textContent = 'Could not load tasks.json';
-        tr.appendChild(td);
-        tbody.appendChild(tr);
-      }
-    }
-
-    loadTasks();
+      });
   </script>
 </body>
 </html>
