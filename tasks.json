@@ -3,7 +3,7 @@
     "TaskName": "fuhur",
     "TaskLink": "efyefgyr",
     "CheckboxColors": [
-      "Transparent",
+      "Green",
       "Transparent",
       "Transparent",
       "Transparent",
@@ -23,7 +23,7 @@
       "Transparent"
     ],
     "UserTasks": [
-      null,
+      false,
       null,
       null,
       null,
@@ -49,7 +49,7 @@
     "TaskName": "hdeuhdu",
     "TaskLink": "udhuehdue",
     "CheckboxColors": [
-      "Transparent",
+      "Green",
       "Transparent",
       "Transparent",
       "Transparent",
@@ -69,7 +69,7 @@
       "Transparent"
     ],
     "UserTasks": [
-      null,
+      false,
       null,
       null,
       null,
