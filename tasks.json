@@ -1,9 +1,9 @@
 [
   {
-    "TaskName": "",
-    "TaskLink": "",
+    "TaskName": "dyegy",
+    "TaskLink": "geygfyf",
     "CheckboxColors": [
-      "Transparent",
+      "Green",
       "Transparent",
       "Transparent",
       "Transparent",
@@ -23,7 +23,7 @@
       "Transparent"
     ],
     "UserTasks": [
-      null,
+      false,
       null,
       null,
       null,
@@ -43,7 +43,7 @@
       null
     ],
     "IsNotWorking": false,
-    "Price": 0
+    "Price": 6
   },
   {
     "TaskName": "gsyd",
