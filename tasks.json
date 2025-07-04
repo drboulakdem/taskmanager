@@ -1,5 +1,51 @@
 [
   {
+    "TaskName": "GFETEF",
+    "TaskLink": "EFGTRF",
+    "CheckboxColors": [
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent"
+    ],
+    "UserTasks": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "IsNotWorking": false,
+    "Price": 4
+  },
+  {
     "TaskName": "",
     "TaskLink": "",
     "CheckboxColors": [
