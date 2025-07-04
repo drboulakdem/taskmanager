@@ -1,66 +1,54 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Task Manager</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 10px;
-      background-color: #f9f9f9;
-      font-size: 18px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    th, td {
-      border: 1px solid #ddd;
-      padding: 10px;
-      word-wrap: break-word;
-    }
-    th {
-      background-color: #4CAF50;
-      color: white;
-    }
-    tr:nth-child(even) {
-      background-color: #f2f2f2;
-    }
-    a {
-      color: #007bff;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    @media screen and (max-width: 600px) {
-      body {
-        font-size: 22px;
-        padding: 5px;
-      }
-      th, td {
-        padding: 8px;
-      }
-    }
-    .reload {
-      font-size: 18px;
-      padding: 6px 12px;
-      margin-bottom: 10px;
-    }
-  </style>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Task Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 10px;
+            background-color: #f9f9f9;
+            font-size: 18px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: auto;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            word-wrap: break-word;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media screen and (max-width: 600px) {
+            body {
+                font-size: 22px;
+                padding: 5px;
+            }
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h2>Active Tasks</h2>
-  <button class="reload" onclick="loadTasks(true)">🔄 Reload</button>
-  <table>
-    <thead>
-      <tr><th>₽</th><th>Task</th></tr>
-    </thead>
-    <tbody id="task-body">
-      <tr><td colspan="2">Loading...</td></tr>
-    </tbody>
-  </table>
-  <script src="script.js"></script>
+    <h2>Active Tasks</h2>
+    <table>
+        <tr><th>₽</th><th>Task</th></tr><tr><td>1.1</td><td><a href='https://socpublic.com/account/task_view.html?id=2676976' target='_blank'>telegr</a></td></tr><tr><td>2.8</td><td><a href='https://socpublic.com/account/task_view.html?id=2696725' target='_blank'>telegram</a></td></tr>
+    </table>
 </body>
 </html>
