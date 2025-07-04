@@ -1,5 +1,51 @@
 [
   {
+    "TaskName": "lopmk",
+    "TaskLink": "duegd",
+    "CheckboxColors": [
+      "Transparent",
+      "Green",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent"
+    ],
+    "UserTasks": [
+      null,
+      false,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "IsNotWorking": false,
+    "Price": 3
+  },
+  {
     "TaskName": "fuhur",
     "TaskLink": "efyefgyr",
     "CheckboxColors": [
