@@ -1,35 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Task Manager</title>
   <style>
-    body { font-family: Arial, sans-serif; padding: 10px; background: #f9f9f9; }
-    #updated { font-size: 0.9em; color: #555; margin-bottom: 0.5em; }
-    table { width: 100%; border-collapse: collapse; margin-top: 0.5em; }
-    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
-    th { background: #4CAF50; color: white; }
-    tr:nth-child(even) { background: #f2f2f2; }
-    a { color: #007bff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    @media (max-width: 600px) {
-      body { font-size: 18px; }
-      th, td { padding: 12px; }
+    body {
+        font-family: Arial, sans-serif;
+        padding: 10px;
+        background-color: #f9f9f9;
+        font-size: 18px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        word-wrap: break-word;
+    }
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+    tr:nth-child(even) { background-color: #f2f2f2; }
+    a {
+        color: #007bff;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    @media screen and (max-width: 600px) {
+        body {
+            font-size: 22px;
+            padding: 5px;
+        }
+        th, td {
+            padding: 8px;
+        }
     }
   </style>
 </head>
 <body>
-  
-  <h1>Active Tasks</h1>
-  <div id="updated">Last updated: never</div>
+  <h2>Active Tasks</h2>
+  <button onclick="location.reload()">🔄 Reload</button>
   <table>
     <thead><tr><th>₽</th><th>Task</th></tr></thead>
-    <tbody id="task-list">
-      <tr><td colspan="2">Loading…</td></tr>
+    <tbody id="task-body">
+      <!-- JS will fill this -->
     </tbody>
   </table>
 
-  <script src="tasks.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>
