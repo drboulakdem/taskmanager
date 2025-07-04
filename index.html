@@ -1,14 +1,66 @@
-<!DOCTYPE html><html lang='en'><head>
-<meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<title>Active Tasks</title><style>
-body{font-family:Arial;padding:10px;font-size:18px;background:#f9f9f9}table{width:100%;border-collapse:collapse}
-th,td{border:1px solid #ddd;padding:8px;text-align:left}th{background:#4CAF50;color:#fff}
-tr:nth-child(even){background:#f2f2f2}a{color:#007bff;text-decoration:none}a:hover{text-decoration:underline}
-@media(max-width:600px){body{font-size:20px}th,td{padding:12px}}
-</style></head><body><h2>Active Tasks</h2><table><tr><th>₽</th><th>Task</th></tr>
-<tr><td>3434</td><td><a href='RETYY' target='_blank'>T5Y6Y</a></td></tr>
-<tr><td>2343</td><td><a href='YY6Y6U' target='_blank'>RTT5</a></td></tr>
-<tr><td>43</td><td><a href='TTHTH' target='_blank'>FRGR</a></td></tr>
-<tr><td>678</td><td><a href='yegfyryf' target='_blank'>dhefg</a></td></tr>
-<tr><td>9</td><td><a href='GYEGYFE' target='_blank'>DYEGFYEG</a></td></tr>
-</table></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task Manager</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 10px; background: #f9f9f9; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1em; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background: #4CAF50; color: white; }
+    tr:nth-child(even) { background: #f2f2f2; }
+    a { color: #007bff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    @media (max-width: 600px) {
+      body { font-size: 18px; }
+      th, td { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Active Tasks</h1>
+  <table id="tasks-table">
+    <thead>
+      <tr><th>₽</th><th>Task</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    async function loadTasks() {
+      try {
+        const resp = await fetch('tasks.json', { cache: 'no-store' });
+        const tasks = await resp.json();
+        const tbody = document.querySelector('#tasks-table tbody');
+        tbody.innerHTML = ''; // clear old rows
+
+        tasks
+          .filter(t => !t.IsNotWorking)
+          .forEach(t => {
+            const tr = document.createElement('tr');
+            const tdPrice = document.createElement('td');
+            tdPrice.textContent = t.Price.toFixed(2);
+            const tdTask = document.createElement('td');
+            const a = document.createElement('a');
+            a.href = t.TaskLink || '#';
+            a.textContent = t.TaskName || '(No Name)';
+            a.target = '_blank';
+            tdTask.appendChild(a);
+            tr.appendChild(tdPrice);
+            tr.appendChild(tdTask);
+            tbody.appendChild(tr);
+          });
+      } catch (e) {
+        console.error('Failed loading tasks.json', e);
+      }
+    }
+
+    // initial load
+    loadTasks();
+
+    // optional: auto‑refresh every minute
+    setInterval(loadTasks, 60_000);
+  </script>
+</body>
+</html>
