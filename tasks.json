@@ -3,7 +3,7 @@
     "TaskName": "GFETEF",
     "TaskLink": "EFGTRF",
     "CheckboxColors": [
-      "Transparent",
+      "Green",
       "Transparent",
       "Transparent",
       "Transparent",
@@ -23,7 +23,7 @@
       "Transparent"
     ],
     "UserTasks": [
-      null,
+      false,
       null,
       null,
       null,
