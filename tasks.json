@@ -44,51 +44,5 @@
     ],
     "IsNotWorking": false,
     "Price": 6
-  },
-  {
-    "TaskName": "DTEFTFE",
-    "TaskLink": "YYEYGF",
-    "CheckboxColors": [
-      "Green",
-      "Green",
-      "Green",
-      "Green",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Green"
-    ],
-    "UserTasks": [
-      false,
-      false,
-      false,
-      false,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      false
-    ],
-    "IsNotWorking": false,
-    "Price": 4
   }
 ]
