@@ -1,11 +1,79 @@
-<html><head><meta name='viewport' content='width=device-width, initial-scale=1'>
-<style>
-body { font-family: sans-serif; padding: 10px; font-size: 18px; }
-table { width: 100%; border-collapse: collapse; } td, th { padding: 8px; border: 1px solid #ccc; }
-a { text-decoration: none; color: blue; }
-@media (max-width: 600px) { body { font-size: 22px; } }
-</style></head><body>
-<h2>Task List</h2><table><tr><th>Task</th><th>₽</th></tr>
-<tr><td><a href="t.me/hadj">lola</a></td><td>1</td></tr>
-<tr><td><a href="https://socpublic.com/account/task_view.html?id=2683624">no tw + disc</a></td><td>3.25</td></tr>
-</table></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 1em;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+        }
+        th, td {
+            padding: 1em;
+            border: 1px solid #ccc;
+            text-align: left;
+            font-size: 1.2em;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            thead tr {
+                display: none;
+            }
+            tr {
+                margin-bottom: 1em;
+                background-color: #fff;
+                padding: 0.5em;
+                border-radius: 5px;
+            }
+            td {
+                border: none;
+                padding: 0.5em;
+                font-size: 1.1em;
+            }
+            td::before {
+                content: attr(data-label);
+                font-weight: bold;
+                display: block;
+                margin-bottom: 0.3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Active Tasks</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Task</th>
+                <th>₽</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dynamic rows will be inserted here by your C# app -->
+        </tbody>
+    </table>
+</body>
+</html>
