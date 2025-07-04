@@ -1,37 +1,64 @@
-async function loadTasks() {
-  try {
-    const res = await fetch('tasks.json', { cache: 'no-store' });
-    const tasks = await res.json();
+// tasks.js
 
-    const tbody = document.getElementById('task-list');
-    tbody.innerHTML = '';
+(() => {
+  const ENDPOINT = 'tasks.json';
+  const INTERVAL_MS = 5000;        // poll every 5 seconds
+  let lastDataHash = null;
 
-    const activeTasks = tasks.filter(t => !t.IsNotWorking);
-
-    if (activeTasks.length === 0) {
-      tbody.innerHTML = '<tr><td colspan="2">No active tasks.</td></tr>';
-      return;
+  // Simple hash on JSON string to detect changes
+  function hash(str) {
+    let h = 0;
+    for (let i = 0; i < str.length; i++) {
+      h = (h << 5) - h + str.charCodeAt(i);
+      h |= 0;
     }
-
-    for (const t of activeTasks) {
-      const tr = document.createElement('tr');
-      const price = Number.isInteger(t.Price) ? t.Price : parseFloat(t.Price).toString();
-
-      const link = t.TaskLink?.trim() || '#';
-      const name = t.TaskName?.trim() || '(No Name)';
-
-      tr.innerHTML = `
-        <td>${price}</td>
-        <td><a href="${link}" target="_blank" rel="noopener noreferrer">${name}</a></td>
-      `;
-
-      tbody.appendChild(tr);
-    }
-  } catch (err) {
-    document.getElementById('task-list').innerHTML =
-      `<tr><td colspan="2">Error loading tasks: ${err.message}</td></tr>`;
+    return h;
   }
-}
 
-loadTasks();
-setInterval(loadTasks, 60000); // refresh every minute
+  async function loadTasks() {
+    try {
+      const resp = await fetch(ENDPOINT, { cache: 'no-store' });
+      if (!resp.ok) throw new Error(resp.statusText);
+      const jsonText = await resp.text();
+      
+      // only parse & render if changed
+      const currentHash = hash(jsonText);
+      if (currentHash === lastDataHash) return;
+      lastDataHash = currentHash;
+
+      const tasks = JSON.parse(jsonText);
+      const tbody = document.getElementById('task-list');
+      tbody.innerHTML = '';
+
+      const active = tasks.filter(t => !t.IsNotWorking);
+      if (active.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="2">No active tasks.</td></tr>';
+        return;
+      }
+
+      for (const t of active) {
+        const tr = document.createElement('tr');
+        const price = Number.isInteger(t.Price) ? t.Price : t.Price;
+        tr.innerHTML = `
+          <td>${price}</td>
+          <td>
+            <a href="${t.TaskLink||'#'}"
+               target="_blank"
+               rel="noopener noreferrer">
+              ${t.TaskName||'(No Name)'}
+            </a>
+          </td>`;
+        tbody.appendChild(tr);
+      }
+    } catch (err) {
+      console.error('Error loading tasks.json:', err);
+    }
+  }
+
+  // Load on start
+  document.addEventListener('DOMContentLoaded', loadTasks);
+  // Poll every 5s
+  setInterval(loadTasks, INTERVAL_MS);
+  // Also reload when tab regains focus
+  window.addEventListener('focus', loadTasks);
+})();
