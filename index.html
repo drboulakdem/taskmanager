@@ -1,47 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Task Manager</title>
   <style>
-    body { font-family: Arial, sans-serif; padding: 10px; background: #f9f9f9; }
-    table { width: 100%; border-collapse: collapse; margin-top: 1em; }
-    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
-    th { background: #4CAF50; color: white; }
-    tr:nth-child(even) { background: #f2f2f2; }
-    a { color: #007bff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    @media (max-width: 600px) {
-      body { font-size: 18px; }
-      th, td { padding: 12px; }
+    body {
+      font-family: Arial, sans-serif;
+      padding: 10px;
+      background-color: #f9f9f9;
+      font-size: 18px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: auto;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      word-wrap: break-word;
+    }
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    @media screen and (max-width: 600px) {
+      body {
+        font-size: 22px;
+        padding: 5px;
+      }
+      th, td {
+        padding: 8px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Active Tasks</h1>
-  <table id="tasks-table">
+  <h2>Active Tasks</h2>
+  <table>
     <thead>
       <tr><th>₽</th><th>Task</th></tr>
     </thead>
-    <tbody></tbody>
+    <tbody id="task-list">
+      <tr><td colspan="2">Loading…</td></tr>
+    </tbody>
   </table>
-  <script>
-    async function loadTasks() {
-      const resp = await fetch('tasks.json', { cache: 'no-store' });
-      const tasks = await resp.json();
-      const tbody = document.querySelector('#tasks-table tbody');
-      tbody.innerHTML = '';
-      tasks.filter(t => !t.IsNotWorking).forEach(t => {
-        const tr = document.createElement('tr');
-        const price = Number.isInteger(t.Price) ? t.Price : t.Price;
-        tr.innerHTML = `<td>${price}</td>
-                        <td><a href="${t.TaskLink||'#'}" target="_blank">${t.TaskName||'(No Name)'}</a></td>`;
-        tbody.appendChild(tr);
-      });
-    }
-    loadTasks();
-    setInterval(loadTasks, 60000);
-  </script>
+
+  <!-- Import external JS -->
+  <script src="tasks.js" defer></script>
 </body>
 </html>
