@@ -1,51 +1,5 @@
 [
   {
-    "TaskName": "huehfgryf",
-    "TaskLink": "efyugfrf",
-    "CheckboxColors": [
-      "Green",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent"
-    ],
-    "UserTasks": [
-      false,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "IsNotWorking": false,
-    "Price": 5
-  },
-  {
     "TaskName": "hitvpn",
     "TaskLink": "https://socpublic.com/account/task_view.html?id=2564540",
     "CheckboxColors": [
@@ -39262,5 +39216,51 @@
     ],
     "IsNotWorking": true,
     "Price": 6
+  },
+  {
+    "TaskName": "huehfgryf",
+    "TaskLink": "efyugfrf",
+    "CheckboxColors": [
+      "Green",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent"
+    ],
+    "UserTasks": [
+      false,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "IsNotWorking": true,
+    "Price": 5
   }
 ]
