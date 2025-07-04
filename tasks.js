@@ -2,63 +2,66 @@
 
 (() => {
   const ENDPOINT = 'tasks.json';
-  const INTERVAL_MS = 1000;        // poll every 5 seconds
-  let lastDataHash = null;
+  const INTERVAL_MS = 3000;          // poll every 3 seconds
+  let etag = null;                   // store last ETag
 
-  // Simple hash on JSON string to detect changes
-  function hash(str) {
-    let h = 0;
-    for (let i = 0; i < str.length; i++) {
-      h = (h << 5) - h + str.charCodeAt(i);
-      h |= 0;
-    }
-    return h;
-  }
+  const updatedDiv = document.getElementById('updated');
+  const tbody      = document.getElementById('task-list');
 
   async function loadTasks() {
     try {
-      const resp = await fetch(ENDPOINT, { cache: 'no-store' });
-      if (!resp.ok) throw new Error(resp.statusText);
-      const jsonText = await resp.text();
-      
-      // only parse & render if changed
-      const currentHash = hash(jsonText);
-      if (currentHash === lastDataHash) return;
-      lastDataHash = currentHash;
+      const headers = etag ? { 'If-None-Match': etag } : {};
+      const resp = await fetch(ENDPOINT, { cache: 'no-store', headers });
 
-      const tasks = JSON.parse(jsonText);
-      const tbody = document.getElementById('task-list');
-      tbody.innerHTML = '';
-
-      const active = tasks.filter(t => !t.IsNotWorking);
-      if (active.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="2">No active tasks.</td></tr>';
+      if (resp.status === 304) {
+        // not modified → no need to re-render
         return;
       }
+      if (!resp.ok) throw new Error(resp.statusText);
 
-      for (const t of active) {
-        const tr = document.createElement('tr');
-        const price = Number.isInteger(t.Price) ? t.Price : t.Price;
-        tr.innerHTML = `
-          <td>${price}</td>
-          <td>
-            <a href="${t.TaskLink||'#'}"
-               target="_blank"
-               rel="noopener noreferrer">
-              ${t.TaskName||'(No Name)'}
-            </a>
-          </td>`;
-        tbody.appendChild(tr);
-      }
+      etag = resp.headers.get('ETag');
+
+      const tasks = await resp.json();
+      render(tasks.filter(t => !t.IsNotWorking));
+
+      updatedDiv.textContent = 
+        'Last updated: ' + new Date().toLocaleTimeString();
     } catch (err) {
-      console.error('Error loading tasks.json:', err);
+      console.error('Fetch error:', err);
+      // Optionally show an error row
+      tbody.innerHTML = 
+        `<tr><td colspan="2">Error loading tasks</td></tr>`;
     }
   }
 
-  // Load on start
+  function render(activeTasks) {
+    if (activeTasks.length === 0) {
+      tbody.innerHTML = `<tr><td colspan="2">No active tasks.</td></tr>`;
+      return;
+    }
+
+    let html = '';
+    for (const t of activeTasks) {
+      const price = Number.isInteger(t.Price) ? t.Price : t.Price;
+      const link  = t.TaskLink?.trim() || '#';
+      const name  = t.TaskName?.trim() || '(No Name)';
+      html += 
+        `<tr>
+           <td>${price}</td>
+           <td>
+             <a href="${link}" target="_blank" rel="noopener noreferrer">
+               ${name}
+             </a>
+           </td>
+         </tr>`;
+    }
+    tbody.innerHTML = html;
+  }
+
+  // initial load
   document.addEventListener('DOMContentLoaded', loadTasks);
-  // Poll every 5s
+  // poll interval
   setInterval(loadTasks, INTERVAL_MS);
-  // Also reload when tab regains focus
+  // refresh on focus
   window.addEventListener('focus', loadTasks);
 })();
