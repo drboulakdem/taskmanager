@@ -90,51 +90,5 @@
     ],
     "IsNotWorking": false,
     "Price": 4
-  },
-  {
-    "TaskName": "tdfte",
-    "TaskLink": "dtded",
-    "CheckboxColors": [
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Green",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Green"
-    ],
-    "UserTasks": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      false,
-      null,
-      null,
-      null,
-      null,
-      null,
-      false
-    ],
-    "IsNotWorking": false,
-    "Price": 7
   }
 ]
