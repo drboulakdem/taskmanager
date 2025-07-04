@@ -2,47 +2,108 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <title>My Tasks</title>
+  <title>My Task Manager</title>
   <style>
-    body { font-family:sans-serif; background:#121212; color:#eee; padding:1em; }
-    table { width:100%; border-collapse:collapse; margin-top:1em; }
-    th,td { padding:0.5em; border-bottom:1px solid #333; }
-    th { text-align:left; color:#aaa; }
-    a { color:#4fc3f7; text-decoration:none; }
-    a:hover { text-decoration:underline; }
+    body {
+      font-family: sans-serif;
+      background: #121212;
+      color: #eee;
+      padding: 1em;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1em;
+    }
+    th, td {
+      padding: 0.5em;
+      border: 1px solid #333;
+    }
+    th {
+      background: #1e1e1e;
+      color: #aaa;
+      text-align: left;
+    }
+    tr:nth-child(even) {
+      background: #1a1a1a;
+    }
+    a {
+      color: #4fc3f7;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <h1>Active Tasks</h1>
   <table id="tasks-table">
     <thead>
-      <tr><th>₽</th><th>Task</th></tr>
+      <tr>
+        <th>₽</th>
+        <th>Task Name</th>
+        <th>Link</th>
+      </tr>
     </thead>
-    <tbody></tbody>
+    <tbody>
+      <!-- rows injected here -->
+    </tbody>
   </table>
+
   <script>
-    async function load() {
-      // fetch the raw JSON from GitHub
-      const resp = await fetch('tasks.json');
-      if (!resp.ok) return console.error('Fetch failed', resp.status);
-      const tasks = await resp.json();
-      const tbody = document.querySelector('#tasks-table tbody');
-      tasks.forEach(t => {
-        if (t.IsNotWorking) return;         // skip non-working
+    async function loadTasks() {
+      const urlBase = window.location.origin + window.location.pathname.replace(/index\.html$/, '');
+      const jsonUrl = urlBase + 'tasks.json';
+      try {
+        const res = await fetch(jsonUrl);
+        if (!res.ok) throw new Error(res.status + ' ' + res.statusText);
+        const tasks = await res.json();
+
+        const tbody = document.querySelector('#tasks-table tbody');
+        tasks.forEach(t => {
+          if (t.IsNotWorking) return;  // skip non-working
+
+          const tr = document.createElement('tr');
+
+          // ₽ column
+          const tdPrice = document.createElement('td');
+          tdPrice.textContent = t.Price.toFixed(2);
+          tr.appendChild(tdPrice);
+
+          // Task Name column
+          const tdName = document.createElement('td');
+          const aName = document.createElement('a');
+          aName.href = t.TaskLink || '#';
+          aName.textContent = t.TaskName || '(no name)';
+          aName.target = '_blank';
+          tdName.appendChild(aName);
+          tr.appendChild(tdName);
+
+          // Link column (raw URL)
+          const tdLink = document.createElement('td');
+          const aLink = document.createElement('a');
+          aLink.href = t.TaskLink || '#';
+          aLink.textContent = t.TaskLink ? new URL(t.TaskLink).hostname : '';
+          aLink.target = '_blank';
+          tdLink.appendChild(aLink);
+          tr.appendChild(tdLink);
+
+          tbody.appendChild(tr);
+        });
+      } catch (err) {
+        console.error('Failed to load tasks:', err);
+        const tbody = document.querySelector('#tasks-table tbody');
         const tr = document.createElement('tr');
-        let td1 = document.createElement('td');
-        td1.textContent = t.Price.toFixed(2);
-        let td2 = document.createElement('td');
-        let a = document.createElement('a');
-        a.href   = t.TaskLink || '#';
-        a.textContent = t.TaskName || '(no name)';
-        a.target = '_blank';
-        td2.appendChild(a);
-        tr.append(td1, td2);
+        const td = document.createElement('td');
+        td.colSpan = 3;
+        td.textContent = 'Could not load tasks.json';
+        tr.appendChild(td);
         tbody.appendChild(tr);
-      });
+      }
     }
-    load();
+
+    loadTasks();
   </script>
 </body>
 </html>
