@@ -33,20 +33,27 @@
         const resp = await fetch('tasks.json', { cache: 'no-store' });
         const tasks = await resp.json();
         const tbody = document.querySelector('#tasks-table tbody');
-        tbody.innerHTML = ''; // clear old rows
+        tbody.innerHTML = '';
 
         tasks
           .filter(t => !t.IsNotWorking)
           .forEach(t => {
             const tr = document.createElement('tr');
+
+            // Price formatting: no trailing .00 if integer
+            let price = t.Price;
+            let priceText = (Number.isInteger(price)) ? price : price;
+
             const tdPrice = document.createElement('td');
-            tdPrice.textContent = t.Price.toFixed(2);
+            tdPrice.textContent = priceText;
+
             const tdTask = document.createElement('td');
             const a = document.createElement('a');
             a.href = t.TaskLink || '#';
             a.textContent = t.TaskName || '(No Name)';
             a.target = '_blank';
             tdTask.appendChild(a);
+
             tr.appendChild(tdPrice);
             tr.appendChild(tdTask);
             tbody.appendChild(tr);
@@ -56,11 +63,9 @@
       }
     }
 
-    // initial load
     loadTasks();
-
-    // optional: auto‑refresh every minute
-    setInterval(loadTasks, 60_000);
+    // optional: refresh every minute
+    setInterval(loadTasks, 60000);
   </script>
 </body>
 </html>
