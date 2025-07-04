@@ -1,30 +1,44 @@
-async function loadTasks() {
-    const response = await fetch('tasks.json?cacheBust=' + Date.now());
+async function loadTasks(forceReload = false) {
+  const tbody = document.getElementById('task-body');
+  tbody.innerHTML = "<tr><td colspan='2'>Loading...</td></tr>";
+
+  try {
+    const cacheBust = forceReload ? '?cache=' + Date.now() : '';
+    const response = await fetch(
+      'https://rawcdn.githack.com/drboulakdem/taskmanager/main/tasks.json' + cacheBust,
+      { cache: 'no-store' }
+    );
     const tasks = await response.json();
 
-    const tbody = document.getElementById('task-body');
-    tbody.innerHTML = ''; // Clear old rows
+    tbody.innerHTML = '';
 
     for (const task of tasks) {
-        if (task.IsNotWorking) continue;
+      if (task.IsNotWorking) continue;
 
-        const row = document.createElement('tr');
+      const row = document.createElement('tr');
 
-        const priceCell = document.createElement('td');
-        priceCell.textContent = task.Price % 1 === 0 ? task.Price.toFixed(0) : task.Price;
-        row.appendChild(priceCell);
+      const priceCell = document.createElement('td');
+      priceCell.textContent = task.Price % 1 === 0 ? task.Price.toFixed(0) : task.Price;
+      row.appendChild(priceCell);
 
-        const taskCell = document.createElement('td');
-        const link = task.TaskLink || "#";
-        const name = task.TaskName || "(No Name)";
-        const a = document.createElement('a');
-        a.href = link;
-        a.target = '_blank';
-        a.textContent = name;
-        taskCell.appendChild(a);
-        row.appendChild(taskCell);
+      const nameCell = document.createElement('td');
+      const a = document.createElement('a');
+      a.href = task.TaskLink || "#";
+      a.textContent = task.TaskName || "(No Name)";
+      a.target = '_blank';
+      nameCell.appendChild(a);
+      row.appendChild(nameCell);
 
-        tbody.appendChild(row);
+      tbody.appendChild(row);
     }
+
+    if (tbody.innerHTML === '') {
+      tbody.innerHTML = "<tr><td colspan='2'>No tasks found.</td></tr>";
+    }
+
+  } catch (error) {
+    tbody.innerHTML = `<tr><td colspan='2'>Error loading tasks: ${error.message}</td></tr>`;
+  }
 }
-window.onload = loadTasks;
+
+window.onload = () => loadTasks(false);
