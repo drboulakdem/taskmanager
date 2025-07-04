@@ -3,6 +3,10 @@
     "TaskName": "dedefd",
     "TaskLink": "fdtfdteyef",
     "CheckboxColors": [
+      "Green",
+      "Transparent",
+      "Transparent",
+      "Green",
       "Transparent",
       "Transparent",
       "Transparent",
@@ -16,13 +20,13 @@
       "Transparent",
       "Transparent",
       "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent"
+      "Green"
     ],
     "UserTasks": [
+      false,
+      null,
+      null,
+      false,
       null,
       null,
       null,
@@ -36,11 +40,7 @@
       null,
       null,
       null,
-      null,
-      null,
-      null,
-      null,
-      null
+      false
     ],
     "IsNotWorking": false,
     "Price": 6
@@ -49,7 +49,8 @@
     "TaskName": "DTEFTFE",
     "TaskLink": "YYEYGF",
     "CheckboxColors": [
-      "Transparent",
+      "Green",
+      "Green",
       "Green",
       "Green",
       "Transparent",
@@ -65,11 +66,11 @@
       "Transparent",
       "Transparent",
       "Transparent",
-      "Transparent",
-      "Transparent"
+      "Green"
     ],
     "UserTasks": [
-      null,
+      false,
+      false,
       false,
       false,
       null,
@@ -85,8 +86,7 @@
       null,
       null,
       null,
-      null,
-      null
+      false
     ],
     "IsNotWorking": false,
     "Price": 4
@@ -112,7 +112,7 @@
       "Transparent",
       "Transparent",
       "Transparent",
-      "Transparent"
+      "Green"
     ],
     "UserTasks": [
       null,
@@ -132,55 +132,9 @@
       null,
       null,
       null,
-      null
+      false
     ],
     "IsNotWorking": false,
     "Price": 7
-  },
-  {
-    "TaskName": "dygd",
-    "TaskLink": "dyedte",
-    "CheckboxColors": [
-      "Green",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent"
-    ],
-    "UserTasks": [
-      false,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "IsNotWorking": false,
-    "Price": 87
   }
 ]
