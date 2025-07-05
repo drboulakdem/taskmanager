@@ -18,9 +18,9 @@
       "Transparent",
       "Transparent",
       "Transparent",
+      "Green",
       "Transparent",
-      "Transparent",
-      "Transparent"
+      "Green"
     ],
     "UserTasks": [
       false,
@@ -38,9 +38,9 @@
       null,
       null,
       null,
+      false,
       null,
-      null,
-      null
+      false
     ],
     "IsNotWorking": false,
     "Price": 2
@@ -66,7 +66,7 @@
       "Red",
       "Green",
       "Transparent",
-      "Transparent"
+      "Green"
     ],
     "UserTasks": [
       true,
@@ -86,7 +86,7 @@
       true,
       false,
       null,
-      null
+      false
     ],
     "IsNotWorking": false,
     "Price": 1.8
@@ -112,7 +112,7 @@
       "Green",
       "Green",
       "Transparent",
-      "Transparent"
+      "Green"
     ],
     "UserTasks": [
       false,
@@ -132,60 +132,10 @@
       false,
       false,
       null,
-      null
+      false
     ],
     "IsNotWorking": false,
     "Price": 1
-  },
-  {
-    "TaskName": "lemo",
-    "TaskLink": "https://socpublic.com/account/task_view.html?id=2460263",
-    "CheckboxColors": [
-      "Green",
-      "Green",
-      "Green",
-      "Green",
-      "Green",
-      "Green",
-      "Red",
-      "Green",
-      "Green",
-      "Green",
-      "Green",
-      "Green",
-      "Green",
-      "Green",
-      "Green",
-      "Green",
-      "Transparent",
-      "Green",
-      "Transparent",
-      "Red"
-    ],
-    "UserTasks": [
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      true,
-      false,
-      false,
-      false,
-      null,
-      false,
-      null,
-      true
-    ],
-    "IsNotWorking": false,
-    "Price": 26
   },
   {
     "TaskName": "",
@@ -40182,5 +40132,55 @@
     ],
     "IsNotWorking": true,
     "Price": 1
+  },
+  {
+    "TaskName": "lemo",
+    "TaskLink": "https://socpublic.com/account/task_view.html?id=2460263",
+    "CheckboxColors": [
+      "Green",
+      "Green",
+      "Green",
+      "Green",
+      "Green",
+      "Green",
+      "Red",
+      "Green",
+      "Green",
+      "Green",
+      "Green",
+      "Green",
+      "Green",
+      "Green",
+      "Green",
+      "Green",
+      "Green",
+      "Green",
+      "Transparent",
+      "Red"
+    ],
+    "UserTasks": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      null,
+      true
+    ],
+    "IsNotWorking": true,
+    "Price": 26
   }
 ]
