@@ -1,10 +1,56 @@
 [
   {
+    "TaskName": "youtube",
+    "TaskLink": "https://socpublic.com/account/task_view.html?id=2696459",
+    "CheckboxColors": [
+      "Red",
+      "Red",
+      "Red",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent"
+    ],
+    "UserTasks": [
+      true,
+      true,
+      true,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "IsNotWorking": false,
+    "Price": 10
+  },
+  {
     "TaskName": "pikabu",
     "TaskLink": "https://socpublic.com/account/task_view.html?id=2695887",
     "CheckboxColors": [
       "Green",
-      "Transparent",
+      "Green",
       "Transparent",
       "Transparent",
       "Transparent",
@@ -24,7 +70,7 @@
     ],
     "UserTasks": [
       false,
-      null,
+      false,
       null,
       null,
       null,
@@ -100,7 +146,7 @@
     "TaskLink": "https://socpublic.com/account/task_view.html?id=2697932",
     "CheckboxColors": [
       "Green",
-      "Transparent",
+      "Green",
       "Transparent",
       "Transparent",
       "Transparent",
@@ -120,7 +166,7 @@
     ],
     "UserTasks": [
       false,
-      null,
+      false,
       null,
       null,
       null,
@@ -146,7 +192,7 @@
     "TaskLink": "https://socpublic.com/account/task_view.html?id=2694941",
     "CheckboxColors": [
       "Red",
-      "Transparent",
+      "Green",
       "Green",
       "Green",
       "Green",
@@ -166,7 +212,7 @@
     ],
     "UserTasks": [
       true,
-      null,
+      false,
       true,
       true,
       true,
