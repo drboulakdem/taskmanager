@@ -1,5 +1,51 @@
 [
   {
+    "TaskName": "vk ",
+    "TaskLink": "https://socpublic.com/account/task_view.html?id=2698875",
+    "CheckboxColors": [
+      "Green",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent"
+    ],
+    "UserTasks": [
+      false,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "IsNotWorking": false,
+    "Price": 1.4
+  },
+  {
     "TaskName": "vk vote",
     "TaskLink": "https://socpublic.com/account/task_view.html?id=2698863",
     "CheckboxColors": [
