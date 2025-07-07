@@ -18,7 +18,7 @@
       "Transparent",
       "Transparent",
       "Transparent",
-      "Transparent",
+      "Green",
       "Transparent",
       "Transparent"
     ],
@@ -38,7 +38,7 @@
       null,
       null,
       null,
-      null,
+      false,
       null,
       null
     ],
@@ -206,7 +206,7 @@
       "Green",
       "Transparent",
       "Transparent",
-      "Transparent",
+      "Green",
       "Transparent",
       "Transparent"
     ],
@@ -226,7 +226,7 @@
       false,
       null,
       null,
-      null,
+      false,
       null,
       null
     ],
@@ -252,7 +252,7 @@
       "Green",
       "Transparent",
       "Transparent",
-      "Transparent",
+      "Green",
       "Transparent",
       "Transparent"
     ],
@@ -272,7 +272,7 @@
       false,
       null,
       null,
-      null,
+      false,
       null,
       null
     ],
@@ -298,7 +298,7 @@
       "Green",
       "Transparent",
       "Green",
-      "Transparent",
+      "Green",
       "Transparent",
       "Transparent"
     ],
@@ -318,7 +318,7 @@
       false,
       null,
       true,
-      null,
+      false,
       null,
       null
     ],
@@ -41976,5 +41976,51 @@
     ],
     "IsNotWorking": true,
     "Price": 35
+  },
+  {
+    "TaskName": "",
+    "TaskLink": "",
+    "CheckboxColors": [
+      "Green",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent"
+    ],
+    "UserTasks": [
+      false,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "IsNotWorking": true,
+    "Price": 30
   }
 ]
