@@ -4,7 +4,7 @@
     "TaskLink": "https://socpublic.com/account/task_view.html?id=2699294",
     "CheckboxColors": [
       "Green",
-      "Transparent",
+      "Green",
       "Green",
       "Transparent",
       "Transparent",
@@ -24,7 +24,7 @@
     ],
     "UserTasks": [
       false,
-      null,
+      false,
       false,
       null,
       null,
@@ -50,7 +50,7 @@
     "TaskLink": "https://socpublic.com/account/task_view.html?id=2698398",
     "CheckboxColors": [
       "Red",
-      "Transparent",
+      "Green",
       "Red",
       "Transparent",
       "Transparent",
@@ -70,7 +70,7 @@
     ],
     "UserTasks": [
       true,
-      null,
+      false,
       true,
       null,
       null,
@@ -96,7 +96,7 @@
     "TaskLink": "https://socpublic.com/account/task_view.html?id=2698138",
     "CheckboxColors": [
       "Green",
-      "Transparent",
+      "Green",
       "Green",
       "Transparent",
       "Transparent",
@@ -116,7 +116,7 @@
     ],
     "UserTasks": [
       true,
-      null,
+      false,
       false,
       null,
       null,
@@ -142,7 +142,7 @@
     "TaskLink": "https://socpublic.com/account/task_view.html?id=2698380",
     "CheckboxColors": [
       "Green",
-      "Transparent",
+      "Green",
       "Green",
       "Transparent",
       "Transparent",
@@ -162,7 +162,7 @@
     ],
     "UserTasks": [
       true,
-      null,
+      false,
       true,
       null,
       null,
@@ -42160,5 +42160,51 @@
     ],
     "IsNotWorking": true,
     "Price": 1.4
+  },
+  {
+    "TaskName": "",
+    "TaskLink": "",
+    "CheckboxColors": [
+      "Green",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent"
+    ],
+    "UserTasks": [
+      false,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "IsNotWorking": true,
+    "Price": 14
   }
 ]
