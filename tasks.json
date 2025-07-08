@@ -1,5 +1,51 @@
 [
   {
+    "TaskName": "vote",
+    "TaskLink": "https://socpublic.com/account/task_view.html?id=2694822",
+    "CheckboxColors": [
+      "Green",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Green",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent"
+    ],
+    "UserTasks": [
+      true,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      true,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "IsNotWorking": false,
+    "Price": 9
+  },
+  {
     "TaskName": "no register",
     "TaskLink": "https://socpublic.com/account/task_view.html?id=2699870",
     "CheckboxColors": [
@@ -17,7 +63,7 @@
       "Green",
       "Transparent",
       "Green",
-      "Transparent",
+      "Green",
       "Transparent",
       "Transparent",
       "Green"
@@ -37,7 +83,7 @@
       false,
       null,
       false,
-      null,
+      false,
       null,
       null,
       false
@@ -109,7 +155,7 @@
       "Green",
       "Green",
       "Red",
-      "Transparent",
+      "Green",
       "Green",
       "Green",
       "Green"
@@ -129,59 +175,13 @@
       false,
       true,
       true,
-      null,
+      false,
       true,
       true,
       false
     ],
     "IsNotWorking": false,
     "Price": 1.87
-  },
-  {
-    "TaskName": "bot",
-    "TaskLink": "https://socpublic.com/account/task_view.html?id=2698138",
-    "CheckboxColors": [
-      "Green",
-      "Green",
-      "Green",
-      "Green",
-      "Green",
-      "Green",
-      "Green",
-      "Green",
-      "Green",
-      "Green",
-      "Green",
-      "Green",
-      "Green",
-      "Green",
-      "Transparent",
-      "Green",
-      "Green",
-      "Green"
-    ],
-    "UserTasks": [
-      true,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      false,
-      true,
-      false,
-      null,
-      true,
-      true,
-      false
-    ],
-    "IsNotWorking": false,
-    "Price": 2
   },
   {
     "TaskName": "",
@@ -35146,7 +35146,7 @@
       "Red",
       "Transparent",
       "Transparent",
-      "Transparent"
+      "Green"
     ],
     "UserTasks": [
       true,
@@ -35166,7 +35166,7 @@
       true,
       null,
       null,
-      null
+      false
     ],
     "IsNotWorking": true,
     "Price": 15
@@ -41464,52 +41464,6 @@
     "Price": 15
   },
   {
-    "TaskName": "vote",
-    "TaskLink": "https://socpublic.com/account/task_view.html?id=2694822",
-    "CheckboxColors": [
-      "Green",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Green",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent"
-    ],
-    "UserTasks": [
-      true,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      true,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "IsNotWorking": true,
-    "Price": 9
-  },
-  {
     "TaskName": "extention 1",
     "TaskLink": "https://socpublic.com/account/task_view.html?id=2691004",
     "CheckboxColors": [
@@ -42482,5 +42436,51 @@
     ],
     "IsNotWorking": true,
     "Price": 1.1
+  },
+  {
+    "TaskName": "bot",
+    "TaskLink": "https://socpublic.com/account/task_view.html?id=2698138",
+    "CheckboxColors": [
+      "Green",
+      "Green",
+      "Green",
+      "Green",
+      "Green",
+      "Green",
+      "Green",
+      "Green",
+      "Green",
+      "Green",
+      "Green",
+      "Green",
+      "Green",
+      "Green",
+      "Green",
+      "Green",
+      "Green",
+      "Green"
+    ],
+    "UserTasks": [
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      true,
+      false
+    ],
+    "IsNotWorking": true,
+    "Price": 2
   }
 ]
