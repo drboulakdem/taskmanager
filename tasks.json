@@ -19,8 +19,8 @@
       "Transparent",
       "Transparent",
       "Transparent",
-      "Transparent",
-      "Transparent"
+      "Green",
+      "Green"
     ],
     "UserTasks": [
       true,
@@ -39,8 +39,8 @@
       null,
       null,
       null,
-      null,
-      null
+      false,
+      false
     ],
     "IsNotWorking": false,
     "Price": 9
@@ -41438,7 +41438,7 @@
       "Transparent",
       "Transparent",
       "Transparent",
-      "Transparent"
+      "Green"
     ],
     "UserTasks": [
       true,
@@ -41458,7 +41458,7 @@
       null,
       null,
       null,
-      null
+      false
     ],
     "IsNotWorking": true,
     "Price": 15
@@ -41484,7 +41484,7 @@
       "Transparent",
       "Transparent",
       "Transparent",
-      "Transparent"
+      "Green"
     ],
     "UserTasks": [
       null,
@@ -41504,7 +41504,7 @@
       null,
       null,
       null,
-      null
+      false
     ],
     "IsNotWorking": true,
     "Price": 7
@@ -41530,7 +41530,7 @@
       "Transparent",
       "Transparent",
       "Transparent",
-      "Transparent"
+      "Green"
     ],
     "UserTasks": [
       null,
@@ -41550,7 +41550,7 @@
       null,
       null,
       null,
-      null
+      false
     ],
     "IsNotWorking": true,
     "Price": 7
@@ -41576,7 +41576,7 @@
       "Transparent",
       "Transparent",
       "Transparent",
-      "Transparent"
+      "Green"
     ],
     "UserTasks": [
       true,
@@ -41596,7 +41596,7 @@
       null,
       null,
       null,
-      null
+      false
     ],
     "IsNotWorking": true,
     "Price": 15
@@ -41621,7 +41621,7 @@
       "Transparent",
       "Transparent",
       "Transparent",
-      "Transparent",
+      "Green",
       "Transparent"
     ],
     "UserTasks": [
@@ -41641,7 +41641,7 @@
       null,
       null,
       null,
-      null,
+      false,
       null
     ],
     "IsNotWorking": true,
@@ -41667,7 +41667,7 @@
       "Transparent",
       "Transparent",
       "Transparent",
-      "Transparent",
+      "Green",
       "Transparent"
     ],
     "UserTasks": [
@@ -41687,7 +41687,7 @@
       null,
       null,
       null,
-      null,
+      false,
       null
     ],
     "IsNotWorking": true,
