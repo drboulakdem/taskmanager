@@ -46,6 +46,52 @@
     "Price": 2.75
   },
   {
+    "TaskName": "wallet",
+    "TaskLink": "https://socpublic.com/account/task_view.html?id=2702782",
+    "CheckboxColors": [
+      "Red",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent"
+    ],
+    "UserTasks": [
+      true,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "IsNotWorking": false,
+    "Price": 5
+  },
+  {
     "TaskName": "no tele \u002B twitter",
     "TaskLink": "https://socpublic.com/account/task_view.html?id=2705444",
     "CheckboxColors": [
