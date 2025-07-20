@@ -32,12 +32,12 @@
       true,
       true,
       true,
-      false,
-      false,
-      false,
+      true,
+      true,
+      true,
       null,
-      false,
-      false,
+      true,
+      true,
       true,
       true,
       true
@@ -115,7 +115,6 @@
       "Red"
     ],
     "UserTasks": [
-      false,
       true,
       true,
       true,
@@ -124,12 +123,13 @@
       true,
       true,
       true,
-      false,
+      true,
+      true,
       true,
       true,
       true,
       null,
-      false,
+      true,
       true,
       true,
       true
@@ -43059,7 +43059,7 @@
       "Transparent"
     ],
     "UserTasks": [
-      false,
+      true,
       null,
       null,
       null,
@@ -43109,7 +43109,7 @@
       true,
       true,
       true,
-      false,
+      true,
       null,
       true,
       true,
@@ -43151,7 +43151,7 @@
       "Transparent"
     ],
     "UserTasks": [
-      false,
+      true,
       null,
       null,
       null,
@@ -43243,7 +43243,7 @@
       "Transparent"
     ],
     "UserTasks": [
-      false,
+      true,
       null,
       null,
       null,
@@ -43289,7 +43289,7 @@
       "Transparent"
     ],
     "UserTasks": [
-      false,
+      true,
       null,
       null,
       null,
@@ -43335,7 +43335,7 @@
       "Red"
     ],
     "UserTasks": [
-      false,
+      true,
       true,
       true,
       true,
@@ -43381,7 +43381,7 @@
       "Transparent"
     ],
     "UserTasks": [
-      false,
+      true,
       null,
       null,
       null,
@@ -43427,7 +43427,7 @@
       "Transparent"
     ],
     "UserTasks": [
-      false,
+      true,
       null,
       null,
       null,
@@ -43482,7 +43482,7 @@
       true,
       null,
       true,
-      false,
+      true,
       null,
       null,
       null,
@@ -43519,17 +43519,17 @@
       "Red"
     ],
     "UserTasks": [
-      false,
       true,
       true,
       true,
-      null,
-      null,
       true,
       null,
+      null,
       true,
-      false,
-      false,
+      null,
+      true,
+      true,
+      true,
       null,
       null,
       null,
@@ -43565,7 +43565,7 @@
       "Transparent"
     ],
     "UserTasks": [
-      false,
+      true,
       null,
       null,
       null,
@@ -43611,26 +43611,72 @@
       "Red"
     ],
     "UserTasks": [
-      false,
+      true,
+      true,
+      true,
+      true,
+      null,
+      null,
+      true,
+      null,
+      true,
       true,
       true,
       true,
       null,
-      null,
       true,
-      null,
       true,
-      false,
-      false,
-      false,
-      null,
-      false,
-      false,
       true,
       true,
       true
     ],
     "IsNotWorking": true,
     "Price": 15
+  },
+  {
+    "TaskName": "",
+    "TaskLink": "",
+    "CheckboxColors": [
+      "Green",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent"
+    ],
+    "UserTasks": [
+      false,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "IsNotWorking": true,
+    "Price": 7
   }
 ]
