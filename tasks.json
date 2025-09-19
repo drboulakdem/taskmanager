@@ -1,51 +1,5 @@
 [
   {
-    "TaskName": "view telegram",
-    "TaskLink": "https://socpublic.com/account/task_view.html?id=2715732",
-    "CheckboxColors": [
-      "Green",
-      "Red",
-      "Red",
-      "Red",
-      "Transparent",
-      "Transparent",
-      "Red",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Transparent"
-    ],
-    "UserTasks": [
-      false,
-      true,
-      true,
-      true,
-      null,
-      null,
-      true,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    "IsNotWorking": false,
-    "Price": 2
-  },
-  {
     "TaskName": "no register",
     "TaskLink": "https://socpublic.com/account/task_view.html?id=2758249",
     "CheckboxColors": [
@@ -63,7 +17,7 @@
       "Transparent",
       "Transparent",
       "Transparent",
-      "Transparent",
+      "Green",
       "Red",
       "Red",
       "Red"
@@ -83,7 +37,7 @@
       null,
       null,
       null,
-      null,
+      false,
       true,
       true,
       true
@@ -155,7 +109,7 @@
       "Green",
       "Transparent",
       "Transparent",
-      "Transparent",
+      "Green",
       "Red",
       "Red",
       "Red"
@@ -175,7 +129,7 @@
       false,
       null,
       null,
-      null,
+      false,
       true,
       true,
       true
@@ -46526,5 +46480,51 @@
     ],
     "IsNotWorking": true,
     "Price": 5
+  },
+  {
+    "TaskName": "view telegram",
+    "TaskLink": "https://socpublic.com/account/task_view.html?id=2715732",
+    "CheckboxColors": [
+      "Green",
+      "Red",
+      "Red",
+      "Red",
+      "Transparent",
+      "Transparent",
+      "Red",
+      "Transparent",
+      "Red",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Red",
+      "Red",
+      "Red"
+    ],
+    "UserTasks": [
+      false,
+      true,
+      true,
+      true,
+      null,
+      null,
+      true,
+      null,
+      true,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      true,
+      true,
+      true
+    ],
+    "IsNotWorking": true,
+    "Price": 2
   }
 ]
