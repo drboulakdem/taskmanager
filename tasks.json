@@ -1,5 +1,51 @@
 [
   {
+    "TaskName": "vk like",
+    "TaskLink": "https://socpublic.com/account/task_view.html?id=2759925",
+    "CheckboxColors": [
+      "Green",
+      "Red",
+      "Red",
+      "Red",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent"
+    ],
+    "UserTasks": [
+      false,
+      true,
+      true,
+      true,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "IsNotWorking": false,
+    "Price": 2
+  },
+  {
     "TaskName": "telegram",
     "TaskLink": "https://socpublic.com/account/task_view.html?id=2756160",
     "CheckboxColors": [
