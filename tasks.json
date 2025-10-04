@@ -90,51 +90,5 @@
     ],
     "IsNotWorking": false,
     "Price": 2
-  },
-  {
-    "TaskName": "dzen",
-    "TaskLink": "https://socpublic.com/account/task_view.html?id=2748795",
-    "CheckboxColors": [
-      "Green",
-      "Red",
-      "Red",
-      "Red",
-      "Transparent",
-      "Transparent",
-      "Red",
-      "Transparent",
-      "Red",
-      "Transparent",
-      "Transparent",
-      "Transparent",
-      "Green",
-      "Transparent",
-      "Transparent",
-      "Red",
-      "Red",
-      "Red"
-    ],
-    "UserTasks": [
-      false,
-      true,
-      true,
-      true,
-      null,
-      null,
-      true,
-      null,
-      true,
-      null,
-      null,
-      null,
-      false,
-      null,
-      null,
-      true,
-      true,
-      true
-    ],
-    "IsNotWorking": false,
-    "Price": 2.76
   }
 ]
