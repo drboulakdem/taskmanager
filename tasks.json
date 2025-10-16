@@ -1,5 +1,51 @@
 [
   {
+    "TaskName": "frg",
+    "TaskLink": "dgyegfyr",
+    "CheckboxColors": [
+      "Green",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent"
+    ],
+    "UserTasks": [
+      false,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "IsNotWorking": false,
+    "Price": 3
+  },
+  {
     "TaskName": "dfr",
     "TaskLink": "rfrf",
     "CheckboxColors": [
