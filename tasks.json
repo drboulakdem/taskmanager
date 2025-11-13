@@ -1,5 +1,51 @@
 [
   {
+    "TaskName": "telegram folder",
+    "TaskLink": "https://socpublic.com/account/task_view.html?id=2792135",
+    "CheckboxColors": [
+      "Green",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent"
+    ],
+    "UserTasks": [
+      false,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "IsNotWorking": false,
+    "Price": 2.88
+  },
+  {
     "TaskName": "easy 3",
     "TaskLink": "https://socpublic.com/account/task_view.html?id=2810800",
     "CheckboxColors": [
