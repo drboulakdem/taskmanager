@@ -1,5 +1,51 @@
 [
   {
+    "TaskName": "no register",
+    "TaskLink": "https://socpublic.com/account/task_view.html?id=2812038",
+    "CheckboxColors": [
+      "Green",
+      "Red",
+      "Red",
+      "Red",
+      "Transparent",
+      "Transparent",
+      "Red",
+      "Transparent",
+      "Red",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Transparent",
+      "Red",
+      "Red",
+      "Red"
+    ],
+    "UserTasks": [
+      false,
+      true,
+      true,
+      true,
+      null,
+      null,
+      true,
+      null,
+      true,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      true,
+      true,
+      true
+    ],
+    "IsNotWorking": false,
+    "Price": 4.5
+  },
+  {
     "TaskName": "telll",
     "TaskLink": "https://socpublic.com/account/task.html?top_type=all\u0026type=all\u0026sort=price_up\u0026search_type=user_id\u0026search_text=9272500\u0026search_price=0.2",
     "CheckboxColors": [
